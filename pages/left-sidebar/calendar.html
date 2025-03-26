@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Lonkar Madhyamik Vidyalaya</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .calendar-page {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .calendar-page h1 {
+            color: #004d4d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .calendar-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .month-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #004d4d;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .month-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        .day-header {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            background: #f5f5f5;
+        }
+        .calendar-day {
+            text-align: center;
+            padding: 15px 10px;
+            border: 1px solid #eee;
+            min-height: 80px;
+        }
+        .calendar-day.event {
+            background: #e6f3f3;
+            cursor: pointer;
+        }
+        .calendar-day .date {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .calendar-day .event-dot {
+            width: 6px;
+            height: 6px;
+            background: #004d4d;
+            border-radius: 50%;
+            margin: 2px auto;
+        }
+        .event-list {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .event-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .event-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .event-title {
+            color: #004d4d;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #004d4d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .back-btn:hover {
+            background: #006666;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-page">
+        <a href="../../index.html" class="back-btn">← Back to Home</a>
+        <h1>Academic Calendar</h1>
+        <div class="calendar-container">
+            <div class="month-header">
+                <button class="prev-month">←</button>
+                <div class="month-name">March 2024</div>
+                <button class="next-month">→</button>
+            </div>
+            <div class="calendar-grid">
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+                
+                <!-- Calendar days -->
+                <!-- Week 1 -->
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"><div class="date">1</div></div>
+                <div class="calendar-day"><div class="date">2</div></div>
+                
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date">3</div></div>
+                <div class="calendar-day"><div class="date">4</div></div>
+                <div class="calendar-day event">
+                    <div class="date">5</div>
+                    <div class="event-dot"></div>
+                </div>
+                <div class="calendar-day"><div class="date">6</div></div>
+                <div class="calendar-day"><div class="date">7</div></div>
+                <div class="calendar-day"><div class="date">8</div></div>
+                <div class="calendar-day"><div class="date">9</div></div>
+                
+                <!-- Continue for the rest of the month -->
+            </div>
+            
+            <div class="event-list">
+                <h3>Upcoming Events</h3>
+                <div class="event-item">
+                    <div class="event-date">March 5, 2024</div>
+                    <div class="event-title">Parent-Teacher Meeting</div>
+                    <div class="event-description">Annual parent-teacher meeting for all classes</div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">March 15, 2024</div>
+                    <div class="event-title">Science Exhibition</div>
+                    <div class="event-description">Annual science exhibition showcasing student projects</div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">March 25, 2024</div>
+                    <div class="event-title">Annual Sports Day</div>
+                    <div class="event-description">School annual sports day celebration</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

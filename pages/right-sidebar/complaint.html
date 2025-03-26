@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Complaint - Lonkar Madhyamik Vidyalaya</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="page-title" data-translate="complaint">Submit Complaint</h1>
+        <div class="content-section">
+            <div class="complaint-info">
+                <p class="complaint-intro">If you have any complaints or grievances, please fill out the form below. We take all complaints seriously and will address them promptly.</p>
+                
+                <form id="complaintForm" class="complaint-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Complaint Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select a category</option>
+                            <option value="academic">Academic Issues</option>
+                            <option value="administrative">Administrative Issues</option>
+                            <option value="infrastructure">Infrastructure</option>
+                            <option value="staff">Staff Related</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complaint">Complaint Details *</label>
+                        <textarea id="complaint" name="complaint" rows="6" required placeholder="Please describe your complaint in detail"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suggestion">Suggested Solution (if any)</label>
+                        <textarea id="suggestion" name="suggestion" rows="4" placeholder="If you have any suggestions for resolving this issue, please mention them here"></textarea>
+                    </div>
+
+                    <div class="form-notice">
+                        <p>* Required fields</p>
+                        <p>Your complaint will be treated with confidentiality and will be addressed by the appropriate authorities.</p>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i> Submit Complaint
+                    </button>
+                </form>
+
+                <div class="complaint-contact">
+                    <h3>Alternative Contact Methods</h3>
+                    <p><i class="fas fa-phone"></i> Grievance Cell: +91 96040 90353</p>
+                    <p><i class="fas fa-envelope"></i> Email: lonkar_college@yahoo.co.in</p>
+                    <p><i class="fas fa-clock"></i> Office Hours: Monday to Saturday, 9:00 AM to 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <a href="../../index.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('complaintForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you can add code to handle the form submission
+            // For example, sending the data to a server or using EmailJS
+            
+            alert('Thank you for submitting your complaint. We will review it and get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lonkar Madhyamik Vidyalaya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Email.js Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("IAgtIkM8K9OyLAgdP"); // Replace this with your actual public key from EmailJS
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-container">
+                <!-- Left Logo -->
+                <div class="logo">
+                    <img src="images/pdea.jpg" alt="College Logo">
+                </div>
+
+                <!-- College Info -->
+                <div class="college-info">
+                    <div class="college-association">Pune District Education Association's</div>
+                    <div class="college-name">LONKAR MADHYAMIK VIDYALAYA & JR COLLEGE, MUNDHWA</div>
+                    <div class="college-affiliation">( Affiliated to Maharashtra State Board of Secondary & Higher Secondary Education )</div>
+                </div>
+
+                <!-- Founder Image -->
+                <div class="founder-section">
+                    <div class="founder-image">
+                        <img src="images/founder.jpg" alt="Founder">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    
+                    <li><a href="#faculties">Faculties</a></li>
+                    
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+
+                    <div class="language-switch">
+                        <button class="lang-toggle-btn" onclick="toggleLanguage()">
+                            <span class="lang-text">मराठी</span>
+                            <i class="fas fa-language"></i>
+                        </button>
+                    </div>
+                    
+                </ul>
+            </div>
+        </nav>
+        
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-widget">
+                <div class="widget-title d-flex justify-content-between align-items-center">
+                    <span data-translate="latest-events">Latest Events</span>
+                    <a href="#" class="view-all-btn" data-translate="view-all" style="color: white; text-decoration: none; font-size: 0.9rem;">View All</a>
+                </div>
+                <div class="widget-content">
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-date">23 March</div>
+                            <div class="event-title" data-translate="event-shahid-divas">Shahid Divas</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">23 March</div>
+                            <div class="event-title" data-translate="event-meteorological-day">World Meteorological Day</div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">23 March</div>
+                            <div class="event-title" data-translate="event-ullhas">ULLHAS : New India Literacy Program</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Area -->
+        <div class="main-area">
+            <img src="images/img_hero.jpg" alt="College Meeting">
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <ul class="right-menu">
+                <li><a href="pages/right-sidebar/notice.html"><i class="fas fa-bullhorn"></i> <span data-translate="notice">Notice</span></a></li>
+                <li><a href="pages/right-sidebar/news.html"><i class="fas fa-newspaper"></i> <span data-translate="news">Educational Videos</span></a></li>
+                <li><a href="pages/right-sidebar/calendar.html"><i class="fas fa-calendar-alt"></i> <span data-translate="calendar">Monthly Calendar</span></a></li>
+                <li><a href="pages/right-sidebar/admission.html"><i class="fas fa-user-graduate"></i> <span data-translate="admission">Admission</span></a></li>
+                <li><a href="pages/right-sidebar/complaint.html"><i class="fas fa-comment-alt"></i> <span data-translate="complaint">Complaint</span></a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Messages Section -->
+    <section class="messages-section">
+        <div class="messages-container">
+            <!-- President -->
+            <div class="message-card">
+                <img src="images/president.jpg" alt="Hon. Ajit Dada Pawar">
+                <h3>मा. अजित दादा पवार</h3>
+                <div class="designation">अध्यक्ष, पीडीईए, पुणे</div>
+                <div class="message-text" id="president-message">
+                    Dear Students, I am indeed very pleased to note your interest to joining Poona District Education Association, PUNE 411038. As its President, I offer you a very cordial welcome. Our faculty is motivated and student oriented. We are always trying to help students to meet their goals by imparting quality education in various faculties. At P.D.E.A. we try to guide all those who choose to become part of the fraternity to mature into balanced, socially aware and humane individuals.
+                </div>
+                <a href="javascript:void(0)" class="read-more" onclick="toggleMessage('president-message', this)">Read More...</a>
+            </div>
+
+            <!-- Vice President -->
+            <div class="message-card">
+                <img src="images/rajendraghadage.jpg" alt="Hon. Rajendra Ghadge">
+                <h3>मा. राजेंद्र घाडगे</h3>
+                <div class="designation">उपाध्यक्ष, पीडीईए, पुणे</div>
+                <div class="message-text" id="vice-president-message">
+                    Dear Students, I am indeed very pleased to note your interest to joining Poona District Education Association, PUNE 411038. As its President, I offer you a very cordial welcome. I am aware of the vision which you have about your future career and the dreams which you are cherishing in your minds. Let me assure you that we help you to nurture them. I take this opportunity to wish each one of our student, success in their studies and all their future endeavors.
+                </div>
+                <a href="javascript:void(0)" class="read-more" onclick="toggleMessage('vice-president-message', this)">Read More...</a>
+            </div>
+
+            <!-- Secretary -->
+            <div class="message-card">
+                <img src="images/sandipkadam.jpg" alt="Hon. Adv Sandeep Kadam">
+                <h3>मा. अॅड. संदीप कदम</h3>
+                <div class="designation">सचिव, पीडीईए, पुणे</div>
+                <div class="message-text" id="secretary-message">
+                    Our trust, incepted in 1941 with the clear vision of "Bahujan Hitay, Bahujan Sukhay" and the mission of providing basic education to eradicate illiteracy prevalent in those times, has now blossomed into a conglomerate of schools, colleges and technical institutions. Pune District Education Association's (PDEA) colleges and schools are shrines of knowledge where students receive quality education and develop capabilities to accept challenges for competitions
+                </div>
+                <a href="javascript:void(0)" class="read-more" onclick="toggleMessage('secretary-message', this)">Read More...</a>
+            </div>
+
+            <!-- Principal -->
+            <div class="message-card">
+                <img src="images/principal.jpg" alt="Principal">
+                <h3>श्रीमती शिंदे ए. ए.</h3>
+                <div class="designation">प्राचार्य</div>
+                <div class="message-text" id="principal-message">
+                    Dear Students, We strive to help our students for harmonious development of physical, mental and social powers. I believe that, the three greet principle, Truth, Goodness & Beauty nourish the entire Social lite. I also welcome you on board for your journey for the academic career, which will become a second home to you.
+                </div>
+                <a href="javascript:void(0)" class="read-more" onclick="toggleMessage('principal-message', this)">Read More...</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation and Gallery Section -->
+    <section class="donation-gallery-section">
+        <div class="donation-gallery-container">
+            <!-- Donation Part -->
+            <div class="donation-content">
+                
+                <h2>Donation Appeal</h2>
+                <div class="donation-logo">
+                    <img src="images/donation.png" alt="Donation Logo">
+                </div>
+                <div class="donation-text" id="donation-message">
+                    We are reaching out to you on behalf of Lonkar Madhyamik Vidyalaya & Junior College, Mundhwa. Our institution has been serving the community, providing quality education to thousands of students. The overwhelming response from our local community has led to a continuous increase in our student enrollment. This growth puts natural pressure on our facilities and available space.
+                </div>
+                <a href="javascript:void(0)" class="read-more" onclick="toggleMessage('donation-message', this)">Read More...</a>
+                <a href="#" class="donation-button">
+                    <span>Complete</span>
+                    <span>Donation Appeal (PDF)</span>
+                </a>
+            </div>
+
+            <!-- Gallery Part -->
+            <div class="gallery-content">
+                <h2 class="gallery-heading">Student Achievements</h2>
+                <div class="excellence-container">
+                    <!-- Navigation Arrows -->
+                    <button class="excellence-nav excellence-prev" onclick="changeExcellenceSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="excellence-nav excellence-next" onclick="changeExcellenceSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Student 1 -->
+                    <div class="excellence-slide active">
+                        <img src="images/achievments/ac_1.jpg" alt="Student Achievement" class="excellence-image">
+                        <div class="excellence-info">
+                            <div class="excellence-name"></div>
+                            <div class="excellence-description">🌹 हार्दिक अभिनंदन🌹
+                                जिल्हा परिषद शिक्षण विभाग पुणे आणि डायट आयोजित (2024 -2025) यशवंतराव चव्हाण आंतरशालेय नाट्य स्पर्धेत पुणे जिल्हा शिक्षण मंडळाचे ,लोणकर माध्यमिक विद्यालय मुंढवा, पुणे 36 
+                                ' Goal'  या  इंग्रजी   नाटिकेस   जिल्हास्तरावर प्रथम क्रमांक मिळाला.तसेच उत्कृष्ट अभिनय म्हणून कु . सृष्टी पाखरे 10 C या  विद्यार्थिनीस उत्कृष्ट अभिनय प्रथम क्रमांक मिळाला. उत्कृष्ट दिग्दर्शन, उत्कृष्ट लेखन व उत्कृष्ट नेपथ्य म्हणून सौ. छाया अंकुश कामथे यांना  प्रथम क्रमांक मिळाला.
+                                </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Student 2 -->
+                    <div class="excellence-slide">
+                        <img src="images/achievments/ac_2.jpg" alt="Student Achievement" class="excellence-image">
+                        <div class="excellence-info">
+                            <div class="excellence-name"></div>
+                            <div class="excellence-description"></div>
+                            <div class="excellence-achievements">डिसेंबर 2024 .अंडर 19 भारतीय महिला क्रिकेट संघात निवड 
+                                💥12 डिसेंबर 2025 रोजी 
+                                महीला अन्डर 19 दक्षिण आफ्रिके विरुद्ध झालेल्या ट्रँगुलर सिरीज मध्ये भारतीय संघाकडून खेळली
+                                💥2024/25 महिला अंडर 19 चॅलेंजर ट्रॉफी मध्ये इंडिया D संघामधून खेळली व इंडिया मध्ये टॉप थ्री विकेट टेकर खेळाडू  ठरली
+                                💥2024 अंडर 19 नॅशनल कॅम्प साठी निवड. 2024 महिला अंडर 19 महाराष्ट्र क्रिकेट संघाकडून खेळली
+                                💥2025 महिला अंडर 23 महाराष्ट्र क्रिकेट संघात निवड
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Student 3 -->
+                    <div class="excellence-slide">
+                        <img src="images/achievments/ac_3.jpg" alt="Student Achievement" class="excellence-image">
+                        <div class="excellence-info">
+                            <div class="excellence-name">Anjali Deshmukh</div>
+                            <div class="excellence-description">State Level Science Exhibition First Prize Winner</div>
+                            <div class="excellence-achievements">Developed innovative water conservation project, Selected for National Science Fair</div>
+                        </div>
+                    </div>
+
+                    <!-- Student 4 -->
+                    <div class="excellence-slide">
+                        <img src="images/photo_gallery/3.jpg" alt="Student Achievement" class="excellence-image">
+                        <div class="excellence-info">
+                            <div class="excellence-name">Aditya Kumar</div>
+                            <div class="excellence-description">District Topper in HSC Board Examinations</div>
+                            <div class="excellence-achievements">Secured admission in IIT Bombay, School Head Boy 2023-24</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <h1 class="gallery-main-heading">Photo Gallery</h1>
+            <div class="album-grid">
+                <!-- Cultural Events Card -->
+                <div class="album-card">
+                    <a href="pages/gallery/cultural-events.html" class="album-image">
+                        <img src="images/photo_gallery/7.jpg" alt="Cultural Events" loading="lazy">
+                    </a>
+                    <h2 class="album-title">Cultural Events</h2>
+                    <a href="pages/gallery/cultural-events.html" class="album-link">
+                        <i class="fas fa-images"></i>
+                        View Gallery
+                    </a>
+                </div>
+
+                <!-- Sports Activities Card -->
+                <div class="album-card">
+                    <a href="pages/gallery/sports-activities.html" class="album-image">
+                        <img src="images/photo_gallery/8.jpg" alt="Sports Activities" loading="lazy">
+                    </a>
+                    <h2 class="album-title">Sports Activities</h2>
+                    <a href="pages/gallery/sports-activities.html" class="album-link">
+                        <i class="fas fa-images"></i>
+                        View Gallery
+                    </a>
+                </div>
+
+                <!-- Environmental Initiatives Card -->
+                <div class="album-card">
+                    <a href="pages/gallery/environmental-initiatives.html" class="album-image">
+                        <img src="images/photo_gallery/9.jpg" alt="Environmental Initiatives" loading="lazy">
+                    </a>
+                    <h2 class="album-title">Environmental Initiatives</h2>
+                    <a href="pages/photo_gallery/11.jpg" class="album-link">
+                        <i class="fas fa-images"></i>
+                        View Gallery
+                    </a>
+                </div>
+
+                <!-- Special Events Card -->
+                <div class="album-card">
+                    <a href="pages/gallery/special-events.html" class="album-image">
+                        <img src="images/photo_gallery/11.jpg" alt="Special Events" loading="lazy">
+                    </a>
+                    <h2 class="album-title">Special Events</h2>
+                    <a href="pages/gallery/special-events.html" class="album-link">
+                        <i class="fas fa-images"></i>
+                        View Gallery
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact Us -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-school"></i>Lonkar Madhyamik Vidyalaya & Junior College</p>
+                    <p><i class="fas fa-map-marker-alt"></i>3, Mundhwa Rd, Lonkar Ali, Mundhwa, Pune, 411036</p>
+                    <p><i class="fas fa-phone"></i>+91 96040 90353</p>
+                    <p><i class="fas fa-envelope"></i>lonkar_college@yahoo.co.in</p>
+                </div>
+            </div>
+
+            <!-- Campus Video -->
+            <div class="footer-section">
+                <h3>Campus Video</h3>
+                <div class="video-container">
+                    Cannot GET /YOUR_VIDEO_URL
+                </div>
+                <div class="visitor-counter">
+                    Visitor Counter: 1117705
+                </div>
+            </div>
+
+            <!-- Map Location -->
+            <div class="footer-section">
+                <h3>Map Location</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8982332542647!2d73.94582407495728!3d18.530844982571727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1df1c50dc99%3A0x9c1c2e5a6c0c3c3a!2sLonkar%20Madhyamik%20Vidyalaya%20%26%20Junior%20College!5e0!3m2!1sen!2sin!4v1708612345678!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Academic Excellence Slideshow
+        document.addEventListener('DOMContentLoaded', function() {
+            const excellenceSlides = document.querySelectorAll('.excellence-slide');
+            let currentExcellenceSlide = 0;
+            let excellenceInterval;
+
+            function showExcellenceSlide(index) {
+                if (index >= excellenceSlides.length) {
+                    currentExcellenceSlide = 0;
+                } else if (index < 0) {
+                    currentExcellenceSlide = excellenceSlides.length - 1;
+                } else {
+                    currentExcellenceSlide = index;
+                }
+
+                excellenceSlides.forEach(slide => {
+                    slide.style.opacity = '0';
+                    slide.classList.remove('active');
+                });
+
+                excellenceSlides[currentExcellenceSlide].style.opacity = '1';
+                excellenceSlides[currentExcellenceSlide].classList.add('active');
+            }
+
+            // Function to handle manual navigation
+            window.changeExcellenceSlide = function(direction) {
+                showExcellenceSlide(currentExcellenceSlide + direction);
+                resetInterval();
+            };
+
+            function resetInterval() {
+                if (excellenceInterval) {
+                    clearInterval(excellenceInterval);
+                }
+                excellenceInterval = setInterval(() => {
+                    showExcellenceSlide(currentExcellenceSlide + 1);
+                }, 3000);
+            }
+
+            // Initialize slideshow
+            showExcellenceSlide(0);
+            resetInterval();
+
+            // Add hover pause functionality
+            const excellenceContainer = document.querySelector('.excellence-container');
+            if (excellenceContainer) {
+                excellenceContainer.addEventListener('mouseenter', () => {
+                    if (excellenceInterval) {
+                        clearInterval(excellenceInterval);
+                    }
+                });
+
+                excellenceContainer.addEventListener('mouseleave', () => {
+                    resetInterval();
+                });
+            }
+        });
+
+        // Toggle message function for donation text
+        function toggleMessage(messageId, button) {
+            const message = document.getElementById(messageId);
+            message.classList.toggle('expanded');
+            button.textContent = message.classList.contains('expanded') ? 'Read Less...' : 'Read More...';
+        }
+    </script>
+</body>
+</html> 
